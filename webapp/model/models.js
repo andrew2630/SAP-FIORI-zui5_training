@@ -6,5 +6,9 @@ sap.ui.define(['sap/ui/model/json/JSONModel', 'sap/ui/Device'], (JSONModel, Devi
       oModel.setDefaultBindingMode('OneWay');
       return oModel;
     },
+
+    getParametersModel() {
+      return { counter: 0 };
+    },
   };
 });

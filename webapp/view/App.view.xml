@@ -1,13 +1,27 @@
 <mvc:View controllerName="ui5.training.zui5training.controller.App"
   xmlns:mvc="sap.ui.core.mvc"
   displayBlock="true"
-  xmlns="sap.m">
+  xmlns="sap.m"
+  xmlns:t="sap.ui.table">
   <Shell id="shell">
     <App id="app">
       <pages>
         <Page id="page"
           title="{i18n>title}">
-          <content />
+          <content>
+            <t:TreeTable id="_IDGenTreeTable1"
+              rows="">
+              <t:extension>
+                <OverflowToolbar id="_IDGenOverflowToolbar1">
+                  <Button id="_IDGenButton1"
+                    icon="sap-icon://add"
+                    press="onButtonAddPressed" />
+                  <Text id="_IDGenText1"
+                    text="{parameters>/counter}" />
+                </OverflowToolbar>
+              </t:extension>
+            </t:TreeTable>
+          </content>
         </Page>
       </pages>
     </App>

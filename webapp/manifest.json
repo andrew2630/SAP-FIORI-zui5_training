@@ -18,6 +18,10 @@
           "localUri": "localService/metadata.xml",
           "odataVersion": "4.0"
         }
+      },
+      "serviceO2": {
+        "uri": "/sap/opu/odata/sap/ZAP_UI5_TRAINIG_SRV/",
+        "type": "OData"
       }
     }
   },
@@ -66,6 +70,20 @@
           "earlyRequests": true,
           "groupId": "$direct"
         }
+      },
+      "parameters": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {}
+      },
+      "modelO2": {
+        "type": "sap.ui.model.odata.v2.ODataModel",
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "defaultOperationMode": "Server",
+          "useBatch": false
+        },
+        "dataSource": "serviceO2"
       }
     },
     "resources": {

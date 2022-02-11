@@ -3,7 +3,11 @@
   "version": "0.1.1",
   "private": true,
   "description": "A Fiori UI5 training application.",
-  "keywords": ["ui5", "openui5", "sapui5"],
+  "keywords": [
+    "ui5",
+    "openui5",
+    "sapui5"
+  ],
   "main": "webapp/index.html",
   "devDependencies": {
     "@sap/ux-ui5-tooling": "1",
@@ -25,7 +29,9 @@
     "deploy-test": "npm run build && fiori deploy --config ui5-deploy.yaml --testMode true"
   },
   "ui5": {
-    "dependencies": ["@sap/ux-ui5-tooling"]
+    "dependencies": [
+      "@sap/ux-ui5-tooling"
+    ]
   },
   "sapuxLayer": "CUSTOMER_BASE"
 }
