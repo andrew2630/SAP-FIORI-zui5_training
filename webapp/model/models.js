@@ -10,5 +10,9 @@ sap.ui.define(['sap/ui/model/json/JSONModel', 'sap/ui/Device'], (JSONModel, Devi
     getParametersModel() {
       return { counter: 0 };
     },
+
+    getEmptyModelCopyO2() {
+      return { Categories: [] };
+    },
   };
 });

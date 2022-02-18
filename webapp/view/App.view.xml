@@ -10,7 +10,7 @@
           title="{i18n>title}">
           <content>
             <t:TreeTable id="_IDGenTreeTable1"
-              rows="">
+              rows="{path: 'modelCopyO2>/Categories' }">
               <t:extension>
                 <OverflowToolbar id="_IDGenOverflowToolbar1">
                   <Button id="_IDGenButton1"
@@ -20,6 +20,57 @@
                     text="{parameters>/counter}" />
                 </OverflowToolbar>
               </t:extension>
+              <t:columns>
+                <t:Column id="_IDGenColumn1">
+                  <Label id="_IDGenLabel1"
+                    text="Category Name" />
+                  <t:template>
+                    <Text id="_IDGenText2"
+                      text="{modelCopyO2>CategoryName}" />
+                  </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColumn2">
+                  <Label id="_IDGenLabel2"
+                    text="Category Description" />
+                  <t:template>
+                    <Text id="_IDGenText3"
+                      text="{modelCopyO2>Description}" />
+                  </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColumn3">
+                  <Label id="_IDGenLabel3"
+                    text="Product ID" />
+                  <t:template>
+                    <ObjectNumber id="_IDGenObjectNumber1"
+                      number="" />
+                  </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColumn4">
+                  <Label id="_IDGenLabel4"
+                    text="Product Name" />
+                  <t:template>
+                    <Text id="_IDGenText4"
+                      text="" />
+                  </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColumn5">
+                  <Label id="_IDGenLabel5"
+                    text="Product Price" />
+                  <t:template>
+                    <ObjectNumber id="_IDGenObjectNumber2"
+                      number="" />
+                  </t:template>
+                </t:Column>
+                <t:Column id="_IDGenColumn6">
+                  <Label id="_IDGenLabel6"
+                    text="Product Added Date" />
+                  <t:template>
+                    <DateTimeField id="_IDGenDateTimeField1"
+                      dateValue=""
+                      editable="false" />
+                  </t:template>
+                </t:Column>
+              </t:columns>
             </t:TreeTable>
           </content>
         </Page>
