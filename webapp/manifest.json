@@ -22,6 +22,10 @@
       "serviceO2": {
         "uri": "/sap/opu/odata/sap/ZAP_UI5_TRAINIG_SRV/",
         "type": "OData"
+      },
+      "serviceO4": {
+        "uri": "/sap/opu/odata4/sap/zap_ui5_training/default/sap/zap_ui5_trainig_v4/0001/",
+        "type": "OData"
       }
     }
   },
@@ -88,6 +92,21 @@
       "modelCopyO2": {
         "type": "sap.ui.model.json.JSONModel",
         "settings": {}
+      },
+      "modelO4": {
+        "type": "sap.ui.model.odata.v4.ODataModel",
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true,
+          "groupProperties": {
+            "default": {
+              "submit": "Auto"
+            }
+          }
+        },
+        "dataSource": "serviceO4"
       }
     },
     "resources": {

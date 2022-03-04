@@ -15,9 +15,13 @@ sap.ui.define(
 
         this.getView().getModel('modelO2').read('/CategorySet', {
           // filters: [new Filter('CategoryID', FilterOperator.EQ, 2)],
+          urlParameters: {
+            $expand: 'Products'
+          },
           success: data => {
             const emptyModelData = models.getEmptyModelCopyO2();
             emptyModelData.Categories = data.results;
+            emptyModelData.Categories.forEach(category => category.Products = category.Products.results);
             this.getView().getModel('modelCopyO2').setData(emptyModelData);
           },
           error: error => console.log(error),
@@ -36,6 +40,13 @@ sap.ui.define(
           success: data => console.table(data.results.sort((a, b) => a.DateAdded - b.DateAdded)),
           error: error => console.log(error),
         });
+
+        $.get(`${models.getServiceV4()}SupplierSet?$filter=Country eq 'UK'`)
+          .done(data => console.log(data));
+
+        fetch(`${models.getServiceV4()}SupplierSet?$filter=Country eq 'USA'`)
+          .then(response => response.json())
+          .then(data => console.log(data));
       },
 
       onButtonAddPressed() {
