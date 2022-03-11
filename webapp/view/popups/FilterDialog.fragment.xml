@@ -1,0 +1,29 @@
+<core:FragmentDefinition id="_IDGenFragmentDefinition5"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <ViewSettingsDialog id="filterDialog"
+    confirm="onFilterDialogConfirm">
+    <filterItems>
+      <ViewSettingsFilterItem id="filterItemCategory"
+        text="Category"
+        key="CategoryID" />
+      <!-- TODO -->
+      <ViewSettingsFilterItem id="filterItem2"
+        text="Price"
+        key="UnitPrice"
+        multiSelect="false">
+        <items>
+          <ViewSettingsItem id="_IDGenViewSettingsItem1"
+            text="Less Than {parameters>priceFirstValue}"
+            key="priceFirstOption" />
+          <ViewSettingsItem id="_IDGenViewSettingsItem2"
+            text="Between {parameters>priceFirstValue} and {parameters>priceSecondValue}"
+            key="priceSecondOption" />
+          <ViewSettingsItem id="_IDGenViewSettingsItem3"
+            text="More Than {parameters>priceSecondValue}"
+            key="priceThirdOption" />
+        </items>
+      </ViewSettingsFilterItem>
+    </filterItems>
+  </ViewSettingsDialog>
+</core:FragmentDefinition>

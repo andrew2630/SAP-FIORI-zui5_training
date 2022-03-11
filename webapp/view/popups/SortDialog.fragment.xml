@@ -1,0 +1,25 @@
+<core:FragmentDefinition id="_IDGenFragmentDefinition4"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <ViewSettingsDialog id="sortDialog"
+    confirm="onSortDialogConfirm">
+    <sortItems>
+      <ViewSettingsItem id="sortItem1"
+        text="Product"
+        key="ProductName"
+        selected="true" />
+      <ViewSettingsItem id="sortItem2"
+        text="Supplier"
+        key="SupplierID" />
+      <ViewSettingsItem id="sortItem3"
+        text="Category"
+        key="CategoryID" />
+      <ViewSettingsItem id="sortItem4"
+        text="Price"
+        key="UnitPrice" />
+      <ViewSettingsItem id="sortItem5"
+        text="Date"
+        key="DateAdded" />
+    </sortItems>
+  </ViewSettingsDialog>
+</core:FragmentDefinition>

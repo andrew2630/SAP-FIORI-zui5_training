@@ -89,10 +89,6 @@
         },
         "dataSource": "serviceO2"
       },
-      "modelCopyO2": {
-        "type": "sap.ui.model.json.JSONModel",
-        "settings": {}
-      },
       "modelO4": {
         "type": "sap.ui.model.odata.v4.ODataModel",
         "settings": {

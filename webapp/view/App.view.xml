@@ -1,104 +1,22 @@
-<mvc:View controllerName="ui5.training.zui5training.controller.App"
+<mvc:View xmlns:internal="sap.landvisz.internal"
+  controllerName="ui5.training.zui5training.controller.App"
   xmlns:mvc="sap.ui.core.mvc"
   displayBlock="true"
   xmlns="sap.m"
-  xmlns:t="sap.ui.table">
+  xmlns:core="sap.ui.core">
   <Shell id="shell">
     <App id="app">
       <pages>
         <Page id="page"
           title="{i18n>title}">
           <content>
-            <t:TreeTable id="_IDGenTreeTable1"
-              class="sapUiSizeCompact"
-              minAutoRowCount="15"
-              rows="{path: 'modelCopyO2>/Categories', parameters: { arrayNames: ['Products'] } }">
-              <t:extension>
-                <OverflowToolbar id="_IDGenOverflowToolbar1">
-                  <Button id="_IDGenButton1"
-                    icon="sap-icon://add"
-                    press="onButtonAddPressed" />
-                  <Text id="_IDGenText1"
-                    text="{parameters>/counter}" />
-                </OverflowToolbar>
-              </t:extension>
-              <t:columns>
-                <t:Column id="_IDGenColumn1">
-                  <Label id="_IDGenLabel1"
-                    text="Category Name" />
-                  <t:template>
-                    <Text id="_IDGenText2"
-                      text="{modelCopyO2>CategoryName}" />
-                  </t:template>
-                </t:Column>
-                <t:Column id="_IDGenColumn2">
-                  <Label id="_IDGenLabel2"
-                    text="Category Description" />
-                  <t:template>
-                    <Text id="_IDGenText3"
-                      text="{modelCopyO2>Description}" />
-                  </t:template>
-                </t:Column>
-                <t:Column id="_IDGenColumn3">
-                  <Label id="_IDGenLabel3"
-                    text="Product ID" />
-                  <t:template>
-                    <ObjectNumber id="_IDGenObjectNumber1"
-                      number="{modelCopyO2>ProductID}" />
-                  </t:template>
-                </t:Column>
-                <t:Column id="_IDGenColumn4">
-                  <Label id="_IDGenLabel4"
-                    text="Product Name" />
-                  <t:template>
-                    <Text id="_IDGenText4"
-                      text="{modelCopyO2>ProductName}" />
-                  </t:template>
-                </t:Column>
-                <t:Column id="_IDGenColumn5">
-                  <Label id="_IDGenLabel5"
-                    text="Product Price" />
-                  <t:template>
-                    <ObjectNumber id="_IDGenObjectNumber2"
-                      number="{modelCopyO2>UnitPrice}" />
-                  </t:template>
-                </t:Column>
-                <t:Column id="_IDGenColumn6">
-                  <Label id="_IDGenLabel6"
-                    text="Product Added Date" />
-                  <t:template>
-                    <DateTimeField id="_IDGenDateTimeField1"
-                      dateValue="{modelCopyO2>DateAdded}"
-                      valueFormat="dd.MM.yyyy"
-                      editable="false" />
-                  </t:template>
-                </t:Column>
-              </t:columns>
-            </t:TreeTable>
-            <List id="_IDGenList1"
-              items="{modelO4>/SupplierSet}">
-              <CustomListItem id="_IDGenCustomListItem1">
-                <HBox id="_IDGenHBox1">
-                  <Text id="_IDGenText5"
-                    width="2em"
-                    class="sapUiTinyMargin bold"
-                    text="{modelO4>SupplierID}" />
-                  <Text id="_IDGenText6"
-                    class="sapUiTinyMargin bold"
-                    text="{modelO4>CompanyName}" />
-                  <Text id="_IDGenText7"
-                    class="sapUiTinyMargin bold"
-                    text="{modelO4>Address}" />
-                  <Text id="_IDGenText8"
-                    class="sapUiTinyMargin bold"
-                    text="{modelO4>City}" />
-                  <Text id="_IDGenText9"
-                    class="sapUiTinyMargin bold"
-                    text="{modelO4>Country}" />
-                </HBox>
-              </CustomListItem>
-            </List>
+            <core:Fragment fragmentName="ui5.training.zui5training.view.fragments.Table"
+              type="XML" />
           </content>
+          <footer>
+            <core:Fragment fragmentName="ui5.training.zui5training.view.fragments.Footer"
+              type="XML" />
+          </footer>
         </Page>
       </pages>
     </App>

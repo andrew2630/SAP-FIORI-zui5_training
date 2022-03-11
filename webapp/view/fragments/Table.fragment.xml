@@ -1,0 +1,53 @@
+<core:FragmentDefinition id="_IDGenFragmentDefinition2"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <Table id="productsTable"
+    items="{modelO2>/ProductsSet}"
+    sticky="ColumnHeaders">
+    <headerToolbar>
+      <core:Fragment fragmentName="ui5.training.zui5training.view.fragments.TableHeader"
+        type="XML" />
+    </headerToolbar>
+    <columns>
+      <Column id="_IDGenColumn1">
+        <Text id="_IDGenText1"
+          text="Product Name" />
+      </Column>
+      <Column id="_IDGenColumn2">
+        <Text id="_IDGenText2"
+          text="Supplier ID" />
+      </Column>
+      <Column id="_IDGenColumn3">
+        <Text id="_IDGenText3"
+          text="Category ID" />
+      </Column>
+      <Column id="_IDGenColumn4">
+        <Text id="_IDGenText4"
+          text="Product Price" />
+      </Column>
+      <Column id="_IDGenColumn5">
+        <Text id="_IDGenText5"
+          text="Product Added Date" />
+      </Column>
+    </columns>
+    <items>
+      <ColumnListItem id="_IDGenColumnListItem1"
+        vAlign="Middle">
+        <cells>
+          <ObjectIdentifier id="_IDGenObjectIdentifier1"
+            title="{modelO2>ProductName}"
+            text="ID: {modelO2>ProductID}" />
+          <Text id="_IDGenText6"
+            text="{modelO2>SupplierID}" />
+          <Text id="_IDGenText7"
+            text="{modelO2>CategoryID}" />
+          <ObjectNumber id="_IDGenObjectNumber1"
+            number="{path: 'modelO2>UnitPrice', formatter: '.formatter.price'}" />
+          <ObjectNumber id="_IDGenObjectNumber2"
+            number="{path: 'modelO2>DateAdded', formatter: '.formatter.date'}"
+            state="{path: 'modelO2>DateAdded', formatter: '.formatter.dateState'}" />
+        </cells>
+      </ColumnListItem>
+    </items>
+  </Table>
+</core:FragmentDefinition>

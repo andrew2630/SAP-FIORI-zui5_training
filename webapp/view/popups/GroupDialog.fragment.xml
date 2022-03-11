@@ -1,0 +1,16 @@
+<core:FragmentDefinition id="_IDGenFragmentDefinition6"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+  <ViewSettingsDialog id="groupDialog"
+    confirm="onGroupDialogConfirm"
+    resetFilters="resetGroupDialog">
+    <groupItems>
+      <ViewSettingsItem id="groupItem1"
+        text="Category"
+        key="CategoryID" />
+      <ViewSettingsItem id="groupItem2"
+        text="Supplier"
+        key="SupplierID" />
+    </groupItems>
+  </ViewSettingsDialog>
+</core:FragmentDefinition>

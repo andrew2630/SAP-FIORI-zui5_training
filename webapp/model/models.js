@@ -8,15 +8,14 @@ sap.ui.define(['sap/ui/model/json/JSONModel', 'sap/ui/Device'], (JSONModel, Devi
     },
 
     getParametersModel() {
-      return { counter: 0 };
-    },
-
-    getEmptyModelCopyO2() {
-      return { Categories: [] };
+      return {
+        priceFirstValue: 50,
+        priceSecondValue: 100,
+      };
     },
 
     getServiceV4() {
       return '/sap/opu/odata4/sap/zap_ui5_training/default/sap/zap_ui5_trainig_v4/0001/';
-    }
+    },
   };
 });
