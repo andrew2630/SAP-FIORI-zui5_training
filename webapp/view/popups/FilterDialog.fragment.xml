@@ -14,13 +14,13 @@
         multiSelect="false">
         <items>
           <ViewSettingsItem id="_IDGenViewSettingsItem1"
-            text="Less Than {parameters>priceFirstValue}"
+            text="Less Than 50"
             key="priceFirstOption" />
           <ViewSettingsItem id="_IDGenViewSettingsItem2"
-            text="Between {parameters>priceFirstValue} and {parameters>priceSecondValue}"
+            text="Between 50 and 100"
             key="priceSecondOption" />
           <ViewSettingsItem id="_IDGenViewSettingsItem3"
-            text="More Than {parameters>priceSecondValue}"
+            text="More Than 100"
             key="priceThirdOption" />
         </items>
       </ViewSettingsFilterItem>
