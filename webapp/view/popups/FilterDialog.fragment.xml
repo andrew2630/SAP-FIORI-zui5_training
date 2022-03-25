@@ -2,12 +2,11 @@
   xmlns="sap.m"
   xmlns:core="sap.ui.core">
   <ViewSettingsDialog id="filterDialog"
-    confirm="onFilterDialogConfirm">
+    confirm=".filter.onFilterDialogConfirm">
     <filterItems>
       <ViewSettingsFilterItem id="filterItemCategory"
         text="Category"
         key="CategoryID" />
-      <!-- TODO -->
       <ViewSettingsFilterItem id="filterItem2"
         text="Price"
         key="UnitPrice"

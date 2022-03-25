@@ -5,43 +5,28 @@ sap.ui.define(
     '../model/models',
     '../model/formatter',
     './handlers/sort',
+    './handlers/group',
+    './handlers/filter',
     './handlers/Footer',
     'sap/ui/core/Fragment',
   ],
-  (Controller, models, formatter, sort, Footer, Fragment) => {
+  (Controller, models, formatter, sort, group, filter, Footer, Fragment) => {
     'use strict';
 
     return Controller.extend('ui5.training.zui5training.controller.App', {
       formatter,
-      // sort: sort,
       sort,
+      group,
+      filter,
       footer: new Footer(),
       _dialogs: [],
 
       onInit() {
         this.getView().getModel('parameters').setData(models.getParametersModel());
-
-        // this.sort.onSortButonPressed.call(this)
-        // this.sort.onSortButonPressed()
       },
 
       async getViewSettingDialog(fragmentName) {
-        // let dialog = this._dialogs.find(dialog => dialog.name === name);
-        // let fragment = this._dialogs.find(dialog => dialog.name === name)?.fragment;
-        // let fragment = (this._dialogs.find(dialog => dialog.name === name) || {}).fragment;
         let fragment = (this._dialogs.find(({ name }) => name === fragmentName) || {}).fragment;
-        // let fragment = (this._dialogs.find(isDialogWithSameName) || {}).fragment;
-
-        // function isDialogWithSameName(dialog) {
-        //   return dialog.name === fragmentName;
-        // }
-
-        // let dialog = this._dialogs[0];
-        // let name = dialog.name;
-
-        // let { name } = this._dialogs[0];
-
-        // let [dialog] = this._dialogs;
 
         if (!fragment) {
           fragment = await Fragment.load({
@@ -56,33 +41,14 @@ sap.ui.define(
           });
 
           return fragment;
-
-          // Fragment.load({
-          //   id: this.getView().getId(),
-          //   name: 'ui5.training.zui5training.view.popups.SortDialog',
-          //   controller: this
-          // }).then(fragment => {
-          //   this._dialogs.push(fragment);
-          //   fragment.open();
-          // });
         }
 
         return fragment;
       },
 
-      onFilterButonPressed() {},
-
-      onGroupButonPressed() {},
-
       onAddProductPressed() {
         // sth, idk
       },
-
-      onFilterDialogConfirm() {},
-
-      onGroupDialogConfirm() {},
-
-      resetGroupDialog() {},
     });
   }
 );

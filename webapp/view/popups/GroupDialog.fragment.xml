@@ -2,8 +2,8 @@
   xmlns="sap.m"
   xmlns:core="sap.ui.core">
   <ViewSettingsDialog id="groupDialog"
-    confirm="onGroupDialogConfirm"
-    resetFilters="resetGroupDialog">
+    confirm=".group.onGroupDialogConfirm"
+    resetFilters=".group.resetGroupDialog">
     <groupItems>
       <ViewSettingsItem id="groupItem1"
         text="Category"

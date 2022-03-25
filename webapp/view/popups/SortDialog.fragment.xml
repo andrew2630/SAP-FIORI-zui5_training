@@ -2,7 +2,7 @@
   xmlns="sap.m"
   xmlns:core="sap.ui.core">
   <ViewSettingsDialog id="sortDialog"
-    confirm="onSortDialogConfirm">
+    confirm=".sort.onSortDialogConfirm">
     <sortItems>
       <ViewSettingsItem id="sortItem1"
         text="Product"
