@@ -1,6 +1,6 @@
 {
   "name": "zui5_training",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "private": true,
   "description": "A Fiori UI5 training application.",
   "keywords": [
@@ -35,6 +35,6 @@
   },
   "sapuxLayer": "CUSTOMER_BASE",
   "dependencies": {
-    "generator-easy-ui5": "^3.2.2"
+    "generator-easy-ui5": "^3.3.0"
   }
 }

@@ -12,13 +12,6 @@ sap.ui.define(
             this.filter._wasDialogOpened = true;
             const categoryFilter = this.byId('filterItemCategory');
 
-            // data.results.forEach(result => {
-            //   categoryFilter.addItem(new ViewSettingsItem({
-            //     key: result.CategoryID,
-            //     text: result.CategoryName
-            //   }))
-            // });
-
             data.results.forEach(({ CategoryID: key, CategoryName: text }) =>
               categoryFilter.addItem(new ViewSettingsItem({ key, text }))
             );
@@ -28,15 +21,11 @@ sap.ui.define(
       },
 
       async onFilterButonPressed() {
-        // if (this.filter._wasDialogOpened === false) {
-        // if (this.filter._wasDialogOpened !== true) {
         if (!this.filter._wasDialogOpened) {
-          // this.filter.fetchCategories.call(this, param1, param2);
-          // this.filter.fetchCategories.apply(this, [param1, param2]);
           this.filter.fetchCategories.apply(this);
         }
 
-        const fragment = await this.getViewSettingDialog('ui5.training.zui5training.view.popups.FilterDialog');
+        const fragment = await this.getDialog('ui5.training.zui5training.view.popups.FilterDialog');
         fragment.open();
       },
 
@@ -47,26 +36,11 @@ sap.ui.define(
         const category = 'CategoryID';
         const price = 'UnitPrice';
 
-        // const filters = [];
-
-        // parameters.filterItems
-        //   .filter(item => item.getParent().getKey() === category)
-        //   .map(item => ({ key: item.getKey() }))
-        //   .forEach(item => filters.push(new Filter(category, FilterOperator.EQ, item.key)));
-
         const filters = parameters.filterItems
           .filter(item => item.getParent().getKey() === category)
           .map(item => new Filter(category, FilterOperator.EQ, item.getKey()));
 
-        // function getIsPriceFilter(item) {
-        //   let result = item.getParent().getKey() === price;
-        //   return result;
-        // }
-
-        // const priceFilter = parameters.filterItems.find(getIsPriceFilter);
-
         const priceFilter = parameters.filterItems.find(item => item.getParent().getKey() === price);
-        // if (priceFilter !== undefined) {
         if (priceFilter) {
           const params = this.getView().getModel('parameters').getData();
 

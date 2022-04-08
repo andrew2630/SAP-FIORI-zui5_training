@@ -25,7 +25,7 @@ sap.ui.define(
         this.getView().getModel('parameters').setData(models.getParametersModel());
       },
 
-      async getViewSettingDialog(fragmentName) {
+      async getDialog(fragmentName) {
         let fragment = (this._dialogs.find(({ name }) => name === fragmentName) || {}).fragment;
 
         if (!fragment) {
@@ -40,14 +40,10 @@ sap.ui.define(
             fragment: fragment,
           });
 
-          return fragment;
+          this.getView().addDependent(fragment);
         }
 
         return fragment;
-      },
-
-      onAddProductPressed() {
-        // sth, idk
       },
     });
   }

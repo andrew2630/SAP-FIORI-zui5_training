@@ -1,21 +1,21 @@
 sap.ui.define(['sap/ui/model/Sorter'], Sorter => {
   'use strict';
-  
+
   return {
     _isReseted: false,
     _functionsLib: {
       CategoryID: context => ({
         key: context.getProperty('CategoryID'),
-        text: `Category ${ context.getProperty('CategoryID') }`
+        text: `Category ${context.getProperty('CategoryID')}`,
       }),
       SupplierID: context => ({
         key: context.getProperty('SupplierID'),
-        text: `Supplier ${ context.getProperty('SupplierID') }`
+        text: `Supplier ${context.getProperty('SupplierID')}`,
       }),
     },
 
     async onGroupButonPressed() {
-      const fragment = await this.getViewSettingDialog('ui5.training.zui5training.view.popups.GroupDialog');
+      const fragment = await this.getDialog('ui5.training.zui5training.view.popups.GroupDialog');
       fragment.open();
     },
 
@@ -37,6 +37,6 @@ sap.ui.define(['sap/ui/model/Sorter'], Sorter => {
 
     resetGroupDialog() {
       this.group._isReseted = true;
-    }
-  }
+    },
+  };
 });

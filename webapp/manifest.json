@@ -103,6 +103,10 @@
           }
         },
         "dataSource": "serviceO4"
+      },
+      "newProduct": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {}
       }
     },
     "resources": {

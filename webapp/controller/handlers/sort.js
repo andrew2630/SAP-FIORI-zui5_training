@@ -3,7 +3,7 @@ sap.ui.define(['sap/ui/model/Sorter'], Sorter => {
 
   return {
     async onSortButonPressed() {
-      const fragment = await this.getViewSettingDialog('ui5.training.zui5training.view.popups.SortDialog');
+      const fragment = await this.getDialog('ui5.training.zui5training.view.popups.SortDialog');
       fragment.open();
     },
 
