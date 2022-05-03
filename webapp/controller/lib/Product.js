@@ -14,10 +14,6 @@ sap.ui.define(['../../model/models', 'sap/m/MessageToast', 'sap/m/MessageBox'], 
     async create() {
       const product = this.productModel.getData();
 
-      // product.CategoryID = +product.CategoryID;
-      // product.SupplierID = +product.SupplierID;
-      // product['CategoryID'] = +product['CategoryID'];
-      // product['SupplierID'] = +product['SupplierID'];
       ['CategoryID', 'SupplierID'].forEach(key => (product[key] = +product[key]));
 
       if (Object.values(product).some(value => !value)) {
