@@ -7,6 +7,6 @@
       icon="sap-icon://add"
       type="Accept"
       text="Add Product"
-      press="onAddProductPressed" />
+      press=".footer.onAddProductPressed" />
   </Toolbar>
 </core:FragmentDefinition>

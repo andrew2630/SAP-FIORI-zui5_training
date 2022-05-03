@@ -1,0 +1,94 @@
+<core:FragmentDefinition xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form">
+  <Dialog id="productDialog1"
+    title="Create Product"
+    contentWidth="40em">
+    <content>
+      <f:SimpleForm id="productSimpleForm1"
+        layout="ResponsiveGridLayout"
+        width="100%">
+
+        <Label id="productLabel1"
+          text="Product Name">
+          <layoutData>
+            <l:GridData id="productGridData1"
+              span="L4 M4 S12" />
+          </layoutData>
+        </Label>
+        <Input id="productInput1"
+          value="{newProduct>/ProductName}"
+          required="true">
+          <layoutData>
+            <l:GridData id="productGridData2"
+              span="L8 M8 S12" />
+          </layoutData>
+        </Input>
+
+        <Label id="productLabel2"
+          text="Supplier ID">
+          <layoutData>
+            <l:GridData id="productGridData3"
+              span="L4 M4 S12" />
+          </layoutData>
+        </Label>
+        <ComboBox id="productComboBox1"
+          value="{newProduct>/SupplierID}"
+          required="true"
+          items="{modelO4>/SupplierSet}"
+          showSecondaryValues="true">
+          <core:ListItem id="productListItem1"
+            key="{modelO4>SupplierID}"
+            text="{modelO4>SupplierID}"
+            additionalText="{modelO4>CompanyName}" />
+        </ComboBox>
+
+        <Label id="productLabel3"
+          text="Category ID">
+          <layoutData>
+            <l:GridData id="productGridData4"
+              span="L4 M4 S12" />
+          </layoutData>
+        </Label>
+        <ComboBox id="productComboBox2"
+          value="{newProduct>/CategoryID}"
+          required="true"
+          items="{modelO2>/CategorySet}"
+          showSecondaryValues="true">
+          <core:ListItem id="productListItem2"
+            key="{modelO2>CategoryID}"
+            text="{modelO2>CategoryID}"
+            additionalText="{modelO2>CategoryName}" />
+        </ComboBox>
+
+        <Label id="productLabel4"
+          text="Unit Price">
+          <layoutData>
+            <l:GridData id="productGridData5"
+              span="L4 M4 S12" />
+          </layoutData>
+        </Label>
+        <Input id="productInput2"
+          value="{newProduct>/UnitPrice}"
+          required="true"
+          type="Number">
+          <layoutData>
+            <l:GridData id="productGridData6"
+              span="L8 M8 S12" />
+          </layoutData>
+        </Input>
+
+      </f:SimpleForm>
+    </content>
+    <buttons>
+      <Button id="productButton1"
+        text="Cancel"
+        press=".footer.onProductDialogCancel" />
+      <Button id="productButton2"
+        text="Confirm"
+        type="Accept"
+        press=".footer.onProductDialogConfirm" />
+    </buttons>
+  </Dialog>
+</core:FragmentDefinition>

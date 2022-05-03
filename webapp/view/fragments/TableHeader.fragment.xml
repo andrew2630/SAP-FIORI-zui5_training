@@ -8,14 +8,14 @@
     <Button id="_IDGenButton1"
       tooltip="Sort"
       icon="sap-icon://sort"
-      press="onSortButonPressed" />
+      press=".sort.onSortButonPressed" />
     <Button id="_IDGenButton2"
       tooltip="Filter"
       icon="sap-icon://filter"
-      press="onFilterButonPressed" />
+      press=".filter.onFilterButonPressed" />
     <Button id="_IDGenButton3"
       tooltip="Group"
       icon="sap-icon://group-2"
-      press="onGroupButonPressed" />
+      press=".group.onGroupButonPressed" />
   </OverflowToolbar>
 </core:FragmentDefinition>
